@@ -1,0 +1,27 @@
+<%
+	var resultJSON = result;
+	var fileTitle = result.fileTitle;
+	var filePath = result.filePath;
+%>
+
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>インデックスページ</title>
+</head>
+<body>
+	<div>
+		<ul>
+			<!-- ここにインデックス項目を列挙する -->
+			<% for(var i in resultJSON){ %>
+				<ul>
+					<li><%= resultJSON[i].fileTitle %></li>
+					<li><%= resultJSON[i].filePath %></li>
+				</ul>	
+			<% } %>
+		</ul>
+	</div>
+</body>
+</html>
